@@ -1,6 +1,6 @@
-// _RUE_
-// Anton Hussi
-// 2019.01.07
+// Java-learning
+// Anton Hussi :: 17TVDO02 :: 15DAPT232.01
+// Created at 2019.01.07 :: Update at 2019.01.08
 public class harj0_nimi {
   public static void main(String[] args) {
     // Variables
