@@ -1,8 +1,7 @@
 // Java-learning
 // Anton Hussi :: 17TVDO02 :: 15DAPT232.01
-// Created at 2019.01.11 :: Update at 2019.01.12
-// Harjoitus 1-6 | Tulotasolaskuri
-import java.util.Arrays;
+// Created at 2019.01.12 :: Update at 2019.01.12
+// Harjoitus 1-9 | Oppilaan arvosana-laskuri perustuen pistemäärään.
 import java.util.regex.*;
 
 public class harj1_8 {
