@@ -12,8 +12,8 @@ public class harj2_2 {
 
     int i = 0;
     while(i < var_count) {
-        System.out.println(var_string);
-        i++;
+      System.out.println(var_string);
+      i++;
     }
   }
 }

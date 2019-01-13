@@ -11,9 +11,8 @@ public class harj1_3 {
   // Variables for class
   static String[] _errorMSG = {"Virhe: ", "Annappas decimaaleina", "", "Tarkista syötteesi"};
   private static DecimalFormat _round = new DecimalFormat("#.##");
-  private static DecimalFormatSymbols _decimal = new DecimalFormatSymbols();
 
-  // Currently working
+  // Currently working for validation
   private static boolean containNumbersOnly(String source) {
     boolean result = false;
     Pattern pattern = Pattern.compile("[0-9]+.[0-9]+"); //correct pattern for both float and integer.
