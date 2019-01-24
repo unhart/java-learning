@@ -41,7 +41,7 @@ public class harj1_8 {
         int _average = Integer.parseInt(_UIaverage);
         String _result = "";
         // Printing out type of value, if it's a possive, negative or null-value
-        if(_average > 0 && _average < 40) {
+        if(_average == 0 && _average <= 40) {
           // checking of values, based on exercise
           if((_average >= 0) && (_average <= 10)) {
             _result = _averageMSG[0];
