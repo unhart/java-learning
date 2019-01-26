@@ -2,7 +2,8 @@
 :: Anton Hussi :: 17TVDO02 :: 15DAPT232.01
 :: Based on must-to-do Java programming exercises and some own shit'n'giggles
 
-2019.01.25  Added category 7-exercise and file-thingies.. 
+2019.01.26  Rebase of file 
+2019.01.25  Added category 7-exercise and file-thingies..
 2019.01.24  Added HashMap, more ArrayUtils and some corrections.
 2019.01.14  Added arrays exercises and tweaked some files.
 2019.01.13  Finished Last exercise but not really impressed on my code, feels chunky and ugly (Either need to clean up or make more class to keep up "my standard")
