@@ -30,7 +30,7 @@ public class harj9_1 {
     // time to make thingies
     try {
       // Here we'remaking a new file called by variable, then userinput and insering of file extension
-      _FILE = new FileWriter(_AbsoluteName + _UI[0] + ".txt");
+      _FILE = new FileWriter(_AbsoluteName + "_" + _UI[0] + ".txt");
       // then we make our actual saving into file, which are three variables based on Reader plus "formatting" for the file aka /r
       _FILE.write(_UI[1] + "\r" + _UI[2] + "\r" + _UI[3]);
       // Close of file and then we go furhter

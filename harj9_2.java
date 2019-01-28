@@ -6,51 +6,63 @@
 // import java.util.Scanner;
 import java.io.*;
 
-public class harj9_1 {
+public class harj9_2 {
   // variables
-  static String _AbsoluteName = "harj9_1";
-  static String _MSG[] = {":: Java-esimerkki 9_1 :: Henkilönnimen tallentaminen tiedostoon", "Syötä tiedostonnimi", "Syötä henkilönimi", "Syötä postiosoite", "Syötä puhelinumero"};
-  static String _MSGe[] = {"Tiedostonluvussa ongelmia", "Virhe tiedostonkäsittelyssä"};
+  static String _AbsoluteName = "harj9_2";
+  static String _MSG[] = {":: Java-esimerkki 9_2 :: Runorekaattori", "Syötä tiedostonnimi", "Syötä runo, rivi kerralla"};
+  static String _MSGe[] = {"Muista syöttää tiedostonnimi", "Tiedosto on olemassa", "Tiedostonluvussa ongelmia", "Virhe tiedostonkäsittelyssä"};
 
-
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     // Calling of filewrite on the _variable
-    FileWriter _FILE;
-
-    String _UI[] = new String[4];
     // printing out program name and description
     System.out.println(_MSG[0]);
     // User inputs for filename, etc..
     System.out.print(_MSG[1] + ": ");
-    _UI[0] = Reader.readString();
-    System.out.print(_MSG[2] + ": ");
-    _UI[1] = Reader.readString();
-    System.out.print(_MSG[3] + ": ");
-    _UI[2] = Reader.readString();
-    System.out.print(_MSG[4] + ": ");
-    _UI[3] = Reader.readString();
+    String _IOUserInput_filename = Reader.readString();
     // time to make thingies
-    try {
-      _FILE = new FileWriter(_AbsoluteName + _UI[0] + ".txt");
-      _FILE.write(_UI[1] + "\r" + _UI[2] + "\r" + _UI[3]);
-      _FILE.close();
-    } catch (IOException e) {
-      System.out.println(_MSGe[1]);
+    String _IOfilename = _AbsoluteName + "_" + _IOUserInput_filename + ".txt";
+    // Checking if userinput is correct and not null, if it's ok -> then continues
+    if(_IOUserInput_filename!= null && ! _IOUserInput_filename.isEmpty()) {
+      File _IOcheck = new File(_IOfilename);
+      // checking if file existing otherwise printing out error
+        if(!_IOcheck.isFile()) {
+          // time to write thingies on loop or exit/Exit by userinput
+          while((boolean)true) {
+            // Writing file according user input
+            // BufferedWriter _IOwrite;
+            try (BufferedWriter _IOwrite = new BufferedWriter(new FileWriter(_IOfilename, true))) {
+              System.out.print(_MSG[2] + ": ");
+              String _IOUserInput_data = Reader.readString();
+              if(_IOUserInput_data.equals("Exit") || _IOUserInput_data.equals("exit")) { break; } else { _IOwrite.newLine(); }
+              _IOwrite.write(_IOUserInput_data);
+              _IOwrite.flush();
+            // Catching of exceptiong aka file error
+            } catch (IOException e) {
+              System.out.println(_MSGe[2]);
+            }
+            // somne snippets for later use, changes, etc...
+            // finally {
+            //   try(Stream<String> _IOtrim = Files.lines(Paths.get(_IOfilename))) {
+            //     _IOtrim.filter(line -> !line.trim().equals("")).forEach(System.out::printLn);
+            //     _IOwrite.close();
+            //   } catch (IOException e) {
+            //     System.out.println("testi");
+            //   }
+            // }
+
+              // if(_IOwrite != null) try {
+              // } finally {
+                // _IOwrite.close();
+              // } catch (IOException ioe2) {}
+          }
+        // }
+        // Closing of file or printing error based on error from above
+      } else {
+        System.out.println(_MSGe[1]);
+      }
+      // Argumenting if check fails
+    } else {
+      System.out.println(_MSGe[0]);
     }
   }
-  //   try {
-  //     _FILEin = new FileReader(_UI[0] + ".txt");
-  //     // Inserting a new name
-  //     _FILEbuffer = new BufferedReader(_UIfilename);
-  //     while(_FILE == 1) {
-  //       _FILEline = "";
-  //       try { _fileline = buffer.readLine(); }
-  //       catch(IOException e)  { System.out.println(_MSGe[0]); }
-  //       if(_FILEline != null)  { System.out.println(_FILEline); }
-  //       else                  { _FILEend = true; }
-  //
-  //     }
-  //   }
-  //   catch(IOException e) { System.out.println(_MSGe[1]); }
-  // }
 }
