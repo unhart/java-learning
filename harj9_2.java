@@ -10,7 +10,7 @@ public class harj9_2 {
   // variables
   static String _AbsoluteName = "harj9_2";
   static String _MSG[] = {":: Java-esimerkki 9_2 :: Runorekaattori", "Syötä tiedostonnimi", "Syötä runo, rivi kerralla"};
-  static String _MSGe[] = {"Muista syöttää tiedostonnimi", "Tiedosto on olemassa", "Tiedostonluvussa ongelmia", "Virhe tiedostonkäsittelyssä"};
+  static String _MSGe[] = {"Muista syöttää tiedostonnimi", "Tiedosto ei ole olemassa", "Tiedostonluvussa ongelmia", "Virhe tiedostonkäsittelyssä"};
 
   public static void main(String[] args) throws IOException {
     // Calling of filewrite on the _variable
@@ -25,7 +25,7 @@ public class harj9_2 {
     if(_IOUserInput_filename!= null && ! _IOUserInput_filename.isEmpty()) {
       File _IOcheck = new File(_IOfilename);
       // checking if file existing otherwise printing out error
-        if(!_IOcheck.isFile()) {
+        if(_IOcheck.isFile()) {
           // time to write thingies on loop or exit/Exit by userinput
           while((boolean)true) {
             // Writing file according user input
