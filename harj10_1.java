@@ -1,15 +1,11 @@
 // Java-learning
 // Anton Hussi :: 17TVDO02 :: 15DAPT232.01
-// harjoitus 10_2 :: tuumat senteiksi
-// import java.math.*;
-
 public class harj10_1 {
   // variables
   static String _MSG[] = {":Java-esimerkki 10_1 :: Tarkistaa onko syötetty vuosi karkausvuosi", "Syötä vuosiluku", "Vuosi","on karkausvuosi","ei ole karkausvuosi"};
   static String _MSGe[] = {"Syötä numeroina"};
 
   public static void main(String[] args) {
-    // Calling of filewrite on the _variable
     // printing out program name and description
     System.out.println(_MSG[0]);
     // User inputs for filename, etc..

@@ -1,7 +1,5 @@
 // Java-learning
 // Anton Hussi :: 17TVDO02 :: 15DAPT232.01
-// Created at 2019.01.11 :: Update at 2019.01.11
-// harjoitus 6_1 : HashMap 1
 import java.util.Random;
 import java.util.HashMap;
 

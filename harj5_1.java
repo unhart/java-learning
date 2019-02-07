@@ -1,8 +1,5 @@
 // Java-learning
 // Anton Hussi :: 17TVDO02 :: 15DAPT232.01
-// Created at 2019.01.11 :: Update at 2019.01.11
-// harjoitus 4_1 : Taulukko
-// import java.util.Random;
 import java.util.*;
 
 public class harj5_1 {

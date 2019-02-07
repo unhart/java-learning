@@ -9,7 +9,7 @@ public class harj2_4 {
     System.out.print("Syötä luku väliltä 1-5: ");
     int nro = Reader.readInt();
     // downgrade harj2_1-filee
-    if(nro > 1 && nro < 5) {
+    if(nro >= 1 && nro <= 5) {
       int i = 1;
       while(i < 101) {
         System.out.println("Arvo on nyt " + i);
@@ -25,10 +25,10 @@ public class harj2_4 {
       return;
     }
 
-    while(i < 100) {
-      System.out.print("Syötä arvo: ");
-      int nro = Reader.readInt();
-      if(nro >)
-    }
+    // while(i < 100) {
+    //   System.out.print("Syötä arvo: ");
+    //   int nro = Reader.readInt();
+    //   if(nro >)
+    // }
   }
 }

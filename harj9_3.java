@@ -1,9 +1,5 @@
 // Java-learning
 // Anton Hussi :: 17TVDO02 :: 15DAPT232.01
-// Created at 2019.01.11 :: Update at 2019.01.11
-// harjoitus 7_2 :: Laske pintala 1
-// import java.util.regex.*;
-// import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
