@@ -3,7 +3,7 @@
 // harjoitus 10_6 :: tuumat senteiksi
 // import java.math.*;
 
-public class harj10_6 {
+public class harj10_7 {
   // variables
   static String _MSG[] = {":Java-esimerkki 10_6 :: BS-laskuri 50 alaspäin", "Luku on"};
   static String _MSGe[] = {"Syötä numeroina"};
